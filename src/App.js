@@ -73,8 +73,7 @@ function App() {
 
   return (
     <div className="app">
-      {/* Home and Points Section */}
-      <header className="task-header">
+      <div className="banner1">
         <h2 className='gg'>Home</h2>
         <div className="header-stats">
           <span className="points-earned">3982</span>
@@ -82,9 +81,8 @@ function App() {
           <span className="balance1">₹1000</span>
           <img src="https://via.placeholder.com/40" alt="Top Player" className="player-icon" />
         </div>
-      </header>
-
-      {/* Banner */}
+      </div>
+           {/* Banner */}
       <div className="banner">
         <p>
           <FontAwesomeIcon icon={faStar} className="fa-star" />
