@@ -354,7 +354,7 @@
 .task {
   width: 10vw;
   text-align: center;
-  margin: 1px auto; /* Center horizontally with auto margins */
+  margin: 10px auto; /* Increase the margin to avoid overlap */
   padding: 15px;
   border-radius: 10%; /* Makes the element circular */
   position: relative;
