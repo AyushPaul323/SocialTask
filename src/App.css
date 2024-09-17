@@ -6,13 +6,6 @@
 }
 
 
-.app {
-  max-width: 100vw;
-  margin: 0 auto;
-  background-color: #ffffff;
-  padding: 20px;
-}
-
 /* Navbar Styling */
 .navbar {
   display: flex;
@@ -81,6 +74,21 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.banner1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-bottom: 2px solid rgba(238, 238, 238, 0.8);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 1;
+  z-index: 100;
+  border-radius: 0 0 20px 20px;
+  
+}
+
 .banner {
   background: linear-gradient(90deg, #6e6ed7, #063bec);
   color: white;
@@ -93,6 +101,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   animation: bannerFadeIn 1s ease-in-out;
+  margin-top: 2vh;
 }
 
 .banner p {
@@ -343,12 +352,11 @@
   justify-content: space-between;
 }
 .task {
-  width: 270px; /* Set width for the circle */
-  height: 250px; /* Set height to match width */
+  width: 10vw;
   text-align: center;
   margin: 1px auto; /* Center horizontally with auto margins */
   padding: 15px;
-  border-radius: 50%; /* Makes the element circular */
+  border-radius: 10%; /* Makes the element circular */
   position: relative;
 
   background: linear-gradient(145deg, #ffffff, #e0e0e0); /* Gradient background */
@@ -650,11 +658,10 @@
   background-color: rgba(255, 255, 255, 0.6);
   border-bottom: 2px solid rgba(238, 238, 238, 0.8);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  position: top;
+  position: sticky;
   top: 0;
   z-index: 100;
   border-radius: 0 0 20px 20px;
- margin-bottom: 2vh;
 }
 
 .header-stats {
@@ -665,13 +672,15 @@
 .points-earned {
   background-color: #ff5722;
   color: white;
-  padding: 10px 20px;
-  border-radius: 25px;
-  margin-right: 15px;
+  padding: 5px 15px; /* Reduced padding */
+  border-radius: 20px; /* Slightly smaller border radius */
+  margin-right: 10px; /* Reduced margin */
   font-weight: 600;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  font-size: 14px; /* Reduced font size */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Slightly smaller shadow */
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
 
 .points-earned:hover {
   cursor: pointer;
@@ -682,10 +691,11 @@
 .balance {
   background-color: #4caf50;
   color: white;
-  padding: 10px 20px;
-  border-radius: 25px;
-  margin-right: 15px;
+  padding: 5px 15px; /* Reduced padding */
+  border-radius: 20px; /* Slightly smaller border radius */
+  margin-right: 10px; /* Reduced margin */
   font-weight: 600;
+  font-size: 14px; /* Reduced font size */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -698,10 +708,11 @@
 .balance1 {
   background-color: #ffffff;
   color: rgb(0, 0, 0);
-  padding: 10px 20px;
-  border-radius: 25px;
-  margin-right: 15px;
+  padding: 5px 15px; /* Reduced padding */
+  border-radius: 20px; /* Slightly smaller border radius */
+  margin-right: 10px; /* Reduced margin */
   font-weight: 600;
+  font-size: 14px; /* Reduced font size */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -713,12 +724,13 @@
 }
 
 .player-icon {
-  width: 60px;
-  height: 60px;
+  width: 40px; /* Reduced size */
+  height: 40px; /* Reduced size */
   border-radius: 50%;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjusted shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .player-icon:hover {
   transform: scale(1.1);
@@ -727,4 +739,104 @@
 .fr{
   font-weight: bold;
   font-size: x-large;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  .points-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .point-box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .wallet-section {
+    flex-direction: column;
+  }
+
+  .wallet-box, 
+  .earnings-box, 
+  .referrals-box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .banner {
+    font-size: 1.2rem;
+  }
+
+  .leaderboard {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-title {
+    font-size: 20px;
+  }
+
+  .wallet-box, 
+  .earnings-box, 
+  .referrals-box {
+    width: 100%;
+    padding: 10px; /* Reduced padding */
+  }
+
+  .progress-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .progress-text {
+    font-size: 20px;
+  }
+
+  .complete-button {
+    padding: 8px 16px; /* Reduced padding */
+    font-size: 14px; /* Smaller font size */
+  }
+}
+
+@media (max-width: 280px) {
+  .footer {
+    width: 100%;
+    max-width: none;
+    bottom: 0;
+    left: 0;
+    transform: none;
+  }
+
+  .footer-content {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .nav-button {
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .points-earned, .balance,.balance1 {
+    padding: 4px 10px;
+    font-size: 14px;
+  }
+}
+
+.gg{
+  font-size: large;
 }
